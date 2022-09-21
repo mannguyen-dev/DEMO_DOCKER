@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Docker Compose Demo</title>
+    </head>
+    <body>
+        <h1>Products</h1>
+        <ul id="productContainer"></ul>
+        <script type="text/javascript">
+            var url = "http://localhost:5001";
+            fetch(url)
+                .then((respone) => respone.json())
+                .then((data) => {
+                    var products = data.products;
+                    var productsListContent = "";
+                    products.forEach((product) => {
+                        productsListContent += `<li>${product.name}: ${product.price} USD</li>`;
+                    });
+                    document.getElementById("productContainer").innerHTML = productsListContent;
+                })
+                .catch((e) => console.log(e));
+        </script>
+    </body>
+</html>
