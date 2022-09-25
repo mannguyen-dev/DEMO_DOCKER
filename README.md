@@ -1,7 +1,7 @@
 # DEMO_DOCKER
-This is Docker Demo Project.
+Đây là dự án thử nghiệm Docker
 
-Use this command to install npm in backend folder:
+Sau khi clone dự án, hãy dùng các lệnh sau để cài đặt Node Modules:
 
 cd backend
 
